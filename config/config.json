@@ -1,0 +1,20 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Mmtec@36257",
+    "database": "sqlnode",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
+  },
+  "test": {
+    "username": "root",
+    "password": "Mmtec@36257",
+    "database": "sqlnode",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "CLEARDB_DATABASE_URL"
+  }
+}

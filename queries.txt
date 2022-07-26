@@ -1,0 +1,32 @@
+/// SQL01 -> Users who have more courses:
+
+SELECT name, count(*) as courses_quantity
+FROM courses
+inner join users on courses.user_id = users.id
+group by users.name having count(*) >1
+
+/// SQL02 -> Course with the most registered contents:
+
+SELECT courses.title, count(*) as contents_quantity
+FROM contents
+inner join modules on contents.module_id = modules.id
+inner join courses on modules.course_id = courses.id
+group by courses.title having count(*) >1
+
+/// SQL03 -> All courses with the total of modules and total content of each course:
+
+/// SQL04 -> All contents with course name:
+
+select contents.title as content_title, courses.title as course_title
+from contents
+inner join modules on contents.module_id = modules.id
+inner join courses on modules.course_id = courses.id
+
+/// SQL05 -> All users who have already watched the ID=2 content(class):
+
+select users.name
+from users
+inner join modules on users.id = modules.user_id
+inner join contents on modules.id = contents.module_id
+where contents.status = true
+group by users.name
