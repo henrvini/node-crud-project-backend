@@ -19,12 +19,12 @@ if (process.env.CLEARDB_DATABASE_URL) {
   sequelize = new Sequelize(`${process.env.CLEARDB_DATABASE_URL}`);
 
   // declare react files in build as static
-  app.use(express.static(path.join(__dirname, "frontend", "build")));
+  // app.use(express.static(path.join(__dirname, "frontend", "build")));
 
-  // serve index.html from the build folder
-  app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
-  });
+  // // serve index.html from the build folder
+  // app.get("/*", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
+  // });
 } else {
   sequelize = new Sequelize("sqlnode", "root", "Mmtec@36257", {
     host: "localhost",
