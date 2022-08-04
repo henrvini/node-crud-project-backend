@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "Mmtec@36257",
+    "username": "rodrigues",
+    "password": "rodrigues",
     "database": "sqlnode",
     "host": "localhost",
     "dialect": "mysql",
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "Mmtec@36257",
+    "password": "root",
     "database": "sqlnode",
     "host": "localhost",
     "dialect": "mysql"

@@ -26,7 +26,7 @@ if (process.env.CLEARDB_DATABASE_URL) {
   //   res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
   // });
 } else {
-  sequelize = new Sequelize("sqlnode", "root", "Mmtec@36257", {
+  sequelize = new Sequelize("sqlnode", "rodrigues", "rodrigues", {
     host: "localhost",
     dialect: "mysql",
     port: 3306,
@@ -54,7 +54,7 @@ try {
   sequelize.authenticate();
   console.log("Connection with Sequelize has been established successfully.");
   app.listen(PORT, (error) => {
-    error ? console.log(error) : console.log(`Server running ...`);
+    error ? console.log(error) : console.log(`Server running on port: ${PORT}`);
   });
 } catch (error) {
   console.error("Unable to connect to the database:", error);

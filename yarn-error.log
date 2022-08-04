@@ -1,0 +1,57 @@
+Arguments: 
+  /home/vini/.nvm/versions/node/v18.7.0/bin/node /home/vini/.nvm/versions/node/v18.7.0/bin/yarn
+
+PATH: 
+  /home/vini/.nvm/versions/node/v18.7.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Users/VINI-PC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/VINI-PC/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.7.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:111:26)
+
+npm manifest: 
+  {
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.1",
+      "mysql2": "^2.3.3",
+      "node": "^18.5.0",
+      "nodemon": "^2.0.19",
+      "sequelize": "^6.21.3",
+      "sequelize-cli": "^6.4.1"
+    },
+    "buildpacks": {
+      "url": "https://nodecrudproject.herokuapp.com/"
+    },
+    "name": "nodeproject",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node index.js",
+      "dev": "nodemon index.js",
+      "migrate": "npx sequelize db:migrate",
+      "migrate:undo": "npx sequelize db:migrate:undo",
+      "migrate:undo:all": "npx sequelize db:migrate:undo:all",
+      "seed": "npx sequelize db:seed:all",
+      "seed:undo": "npx sequelize db:seed:undo:all",
+      "db:init": "npx sequelize db:migrate && npx sequelize db:seed:all"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
